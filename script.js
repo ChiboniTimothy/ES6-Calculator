@@ -26,26 +26,33 @@ const ss15 = document.getElementById('clear');
 const ss16 = document.getElementById('division');
 
 const ss17 = document.getElementById('delete');
+const ss18 = document.getElementById('sin');
+const ss19 = document.getElementById('cos');
+const ss20 = document.getElementById('tan');
+const ss21 = document.getElementById('pie');
+const ss222 = document.getElementById('square');
 
 
 
 
 
 
-// Button one
+
+
+// Button function one
 ss.addEventListener('click', function(){
     form1.answer.value += '1'
 });
 
 
-// Button two
+// Button function two
 ss1.addEventListener('click', function(){
 
     form1.answer.value += '2'
 });
 
 
-// Button three
+// Button function three
 ss2.addEventListener('click', function(){
    
     form1.answer.value += '3'
@@ -53,7 +60,7 @@ ss2.addEventListener('click', function(){
 
 
 
-// Button plus
+// Button function plus
 ss3.addEventListener('click', function(){
     
     form1.answer.value += '+'
@@ -61,28 +68,28 @@ ss3.addEventListener('click', function(){
 
 
 
-// Button four
+// Button function four
 ss4.addEventListener('click', function(){
     
     form1.answer.value += '4'
 });
 
 
-// Button five
+// Button function five
 ss5.addEventListener('click', function(){
     
     form1.answer.value += '5'
 });
 
 
-// Button six
+// Button function six
 ss6.addEventListener('click', function(){
     
     form1.answer.value += '6'
 });
 
 
-// Button minus
+// Button function minus
 ss7.addEventListener('click', function(){
    
     form1.answer.value += '-'
@@ -90,7 +97,7 @@ ss7.addEventListener('click', function(){
 
 
 
-// Button seven
+// Button function seven
 ss8.addEventListener('click', function(){
     
     form1.answer.value += '7'
@@ -98,27 +105,27 @@ ss8.addEventListener('click', function(){
 
 
 
-// Button eight
+// Button function eight
 ss9.addEventListener('click', function(){
     
     form1.answer.value += '8'
 });
 
-// Button nine
+// Button function nine
 ss10.addEventListener('click', function(){
    
     form1.answer.value += '9'
 });
 
 
-// Button times
+// Button function times
 ss11.addEventListener('click', function(){
    
     form1.answer.value += '*'
 });
 
 
-// Button zero
+// Button function zero
 ss12.addEventListener('click', function(){
    
     form1.answer.value += '0'
@@ -126,21 +133,21 @@ ss12.addEventListener('click', function(){
 
 
 
-// Button dot
+// Button function dot
 ss13.addEventListener('click', function(){
    
     form1.answer.value += '.'
 });
 
 
-// Button equals
+// Button function equals
 ss14.addEventListener('click', function(){
    
     form1.answer.value = eval(form1.answer.value);
 });
 
 
-// Button clear
+// Button function clear
 ss15.addEventListener('click', function(){
    
     form1.answer.value = ' ';
@@ -148,7 +155,7 @@ ss15.addEventListener('click', function(){
 
 
 
-// Button division
+// Button function division
 ss16.addEventListener('click', function(){
    
     form1.answer.value += '/'
@@ -162,3 +169,22 @@ ss17.addEventListener('click', function(){
     form1.answer.value = del.substring(0, del.length - 1); 
 
 });
+
+
+// ss18.addEventListener('click', function(){
+//     form1.answer.value += '1'
+//     if(checkNum(this.form1.calc.value)) { cos(this.form1) }
+// });
+
+
+// function cos(form) {
+// 	form.display.value = Math.cos(form.display.value);
+// }
+
+// function sin(form) {
+// 	form.display.value = Math.sin(form.display.value);
+// }
+
+// function tan(form) {
+// 	form.display.value = Math.tan(form.display.value);
+// }
