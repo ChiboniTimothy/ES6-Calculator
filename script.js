@@ -34,10 +34,51 @@ const ss222 = document.getElementById('square');
 
 
 
+const checkNum = (str) => {
+	for (let i = 0; i < str.length; i++) {
+		let ch = str.charAt(i);
+		if (ch < "0" ?. ch > "9") {
+			if (ch != "/" && ch != "*" && ch != "+" && ch != "-" && ch != "."
+				&& ch != "(" && ch!= ")" && ch != "%") {
+				return false
+				}
+			}
+		}
+		return true
+};
 
 
 
+// Coverts a pie 
+const addChar = (input, character) => {
+	if(input.value == null || input.value == "0")
+		input.value = character
+	else
+		input.value += character
+}
 
+// Cos function
+
+function cos(form) {
+	form.answer.value = Math.cos(form.answer.value);
+}
+
+
+// Sin function
+function sin(form) {
+	form.answer.value = Math.sin(form.answer.value);
+}
+
+
+// Tan function
+
+function tan(form) {
+	form.answer.value = Math.tan(form.answer.value);
+}
+// Square function
+function square(form) {
+	form.answer.value = eval(form.answer.value) * eval(form.answer.value)
+}
 
 // Button function one
 ss.addEventListener('click', function(){
@@ -171,20 +212,32 @@ ss17.addEventListener('click', function(){
 });
 
 
-// ss18.addEventListener('click', function(){
-//     form1.answer.value += '1'
-//     if(checkNum(this.form1.calc.value)) { cos(this.form1) }
-// });
+// Sin function button
 
+ss18.addEventListener('click', function(){
 
-// function cos(form) {
-// 	form.display.value = Math.cos(form.display.value);
-// }
+    if(checkNum(this.form.answer.value)) { sin(this.form) }
+});
 
-// function sin(form) {
-// 	form.display.value = Math.sin(form.display.value);
-// }
+// Cos function button
+ss19.addEventListener('click', function(){
 
-// function tan(form) {
-// 	form.display.value = Math.tan(form.display.value);
-// }
+    if(checkNum(this.form.answer.value)) { cos(this.form) }
+});
+
+// tan function button
+ss20.addEventListener('click', function(){
+
+    if(checkNum(this.form.answer.value)) { tan(this.form) }
+});
+
+// Pie function button
+ss21.addEventListener('click', function(){
+    addChar(this.form.answer,'3.14159265359')
+    
+});
+
+// Square function button
+ss222.addEventListener('click', function(){
+    if(checkNum(this.form.answer.value)) {square(this.form) }
+});
