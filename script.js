@@ -49,7 +49,7 @@ const checkNum = (str) => {
 
 
 
-// Coverts a pie 
+// function Coverts a pie 
 const addChar = (input, character) => {
 	if(input.value == null || input.value == "0")
 		input.value = character
