@@ -33,6 +33,13 @@ const ss21 = document.getElementById('pie');
 const ss222 = document.getElementById('square');
 
 
+const convert = document.getElementById("convert");
+const result = document.getElementById("calc");
+const from = document.getElementById("from");
+const to = document.getElementById("to");
+const amount = document.getElementById("amount");
+
+
 
 const checkNum = (str) => {
 	for (let i = 0; i < str.length; i++) {
@@ -241,3 +248,22 @@ ss21.addEventListener('click', function(){
 ss222.addEventListener('click', function(){
     if(checkNum(this.form.answer.value)) {square(this.form) }
 });
+
+//  Currency Convertion
+
+convert.addEventListener("click", function() {
+    console.log('Clicked')
+    let fromCurrency = from.value;
+    let toCurrency = to.value;
+    let amt = amount.value;
+    fetch(`https://api.exchangerate-api.com/v4/latest/${fromCurrency}`)
+    .then(response => {
+          return response.json();
+    })
+    .then(data => {
+       let rate = data.rates[toCurrency];
+       let total = rate * amt;
+    
+       form1.answer.value = `${amt} ${fromCurrency} = ${total} ${toCurrency}`;
+    });
+ });

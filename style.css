@@ -1,18 +1,7 @@
 *{
     padding: 0%;
     margin: 0%;
-};
-
-
-
-
-#pic{
-	width: 100%;
-};
-
-#pic img{
-	width: 70px;
-	height: 50px;
+    font-family: sans-serif;
 }
 
 #clear{
@@ -37,7 +26,7 @@ color:  #111;
 .formstyle
 {
 width: 358px;
-height: 550px;
+height: 650px;
 margin: auto;
 border: 3px solid #fff;
 border-radius: 9px;
@@ -50,7 +39,7 @@ background-color: #111;
 
 input
 {
-width: 20px;
+width: 10px;
 background-color: #fff;
 color: #111;
 border: 3px solid gray;
@@ -65,8 +54,42 @@ border: 3px solid gray;
 width: 300px;
 border: 5px solid black;
 	border-radius: 9px;
-	padding: 20px;
+	padding: 16px;
 	margin: auto;
+}
+
+#amount{
+    width: 150px;
+	border-radius: 9px;
+	padding: 15px;
+
+}
+
+#convert{
+	padding: 15px 20px;
+    text-align: center;
+    background-color: brown;
+    color: #111;
+}
+
+#convert:hover{
+    background-color: #fff;
+    color: brown;
+    border: solid blue;
+}
+
+#from{
+    padding: 9px;
+    text-align: center;
+    background-color: #fff;
+    color: #111;
+}
+
+#to{
+    padding: 9px;
+    text-align: center;
+    background-color: #fff;
+    color: #111; 
 }
 
 /* Grow */
@@ -85,14 +108,4 @@ border: 5px solid black;
 .hvr-grow:focus,
 .hvr-grow:active {
     transform: scale(1.1);
-}
-
-
-img{
-    position: relative;
-    width: 100px;
-    height: 70px;
-    padding: 2px 4px;
-    border-radius: 10px;
-  
 }

@@ -11,13 +11,36 @@
 </head>
 
 <body>
-<img src="./images/Hello.jpg" alt="Chiboni">
 <div class= "formstyle">
 <form name = "form1">
 	
 	<!-- This input box shows the button pressed by the user in calculator. -->
 
   <input id = "calc" type ="text" name = "answer"> <br> <br>
+
+  <label style="color: #fff;">From:</label>
+
+      <select id="from">
+         <option value="USD">USD</option>
+         <option value="EUR">EUR</option>
+         <option value="GBP">GBP</option>
+         <option value="INR">INR</option>
+         <option value="ZMW">ZMW</option>
+      </select>
+
+      <label style="color: #fff;">To:</label>
+
+      <select id="to">
+         <option value="USD">USD</option>
+         <option value="EUR">EUR</option>
+         <option value="GBP">GBP</option>
+         <option value="INR">INR</option>
+         <option value="ZMW">ZMW</option>
+      </select>
+      <label>Amount:</label>
+      <input type="text" id="amount" placeholder="Enter amount" />
+      <button type="button" id="convert">Convert</button>
+      <p id="result"></p>
 
   <!-- Display the calculator button on the screen. -->
   
@@ -65,5 +88,3 @@
 <script src="script.js"></script>
 </body>
 </html>
-
- 
