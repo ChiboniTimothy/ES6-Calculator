@@ -32,6 +32,10 @@ const ss20 = document.getElementById('tan');
 const ss21 = document.getElementById('pie');
 const ss222 = document.getElementById('square');
 
+const ss223 = document.getElementById('percentage');
+const ss224 = document.getElementById('squareroot');
+const ss225 = document.getElementById('ln');
+
 
 const convert = document.getElementById("convert");
 const result = document.getElementById("calc");
@@ -54,6 +58,12 @@ const checkNum = (str) => {
 		return true
 };
 
+let ps = 0.0;
+function percent(input) {
+  ps = input.value;
+  input.value = input.value + "%";
+};
+
 
 
 // function Coverts a pie 
@@ -63,6 +73,13 @@ const addChar = (input, character) => {
 	else
 		input.value += character
 }
+
+// Square root function
+
+function sqrt(form) {
+	form.answer.value = Math.sqrt(form.answer.value);
+}
+
 
 // Cos function
 
@@ -85,6 +102,12 @@ function tan(form) {
 // Square function
 function square(form) {
 	form.answer.value = eval(form.answer.value) * eval(form.answer.value)
+}
+
+// Log function
+
+function ln(form) {
+	form.answer.value = Math.log(form.answer.value);
 }
 
 // Button function one
@@ -210,9 +233,6 @@ ss16.addEventListener('click', function(){
     form1.answer.value += '/'
 });
 
-amount.addEventListener('click', function(){
-    amount.answer.value += '/'
-});
 
 // Delete function remove the element from total length ? 1 */
 
@@ -252,6 +272,25 @@ ss21.addEventListener('click', function(){
 ss222.addEventListener('click', function(){
     if(checkNum(this.form.answer.value)) {square(this.form) }
 });
+
+
+// Percentage function button
+ss223.addEventListener('click', function(){
+    console.log('clicked')
+    percent(this.form.answer)
+});
+
+// Square root button
+ss224.addEventListener('click', function(){
+    if(checkNum(this.form.answer.value)) { sqrt(this.form) }
+});
+
+//  Log button
+ss225.addEventListener('click', function(){
+    if(checkNum(this.form.answer.value)) { ln(this.form) }
+});
+
+
 
 //  Currency Convertion
 
