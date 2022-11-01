@@ -197,18 +197,22 @@ ss14.addEventListener('click', function(){
 
 // Button function clear
 ss15.addEventListener('click', function(){
-   
-    form1.answer.value = ' ';
+
+    amount.value = ' ';
+   form1.answer.value = ' ';
 });
 
 
 
 // Button function division
 ss16.addEventListener('click', function(){
-   
+    form1.currency.value =+ '/'
     form1.answer.value += '/'
 });
 
+amount.addEventListener('click', function(){
+    amount.answer.value += '/'
+});
 
 // Delete function remove the element from total length ? 1 */
 
@@ -252,10 +256,10 @@ ss222.addEventListener('click', function(){
 //  Currency Convertion
 
 convert.addEventListener("click", function() {
-    console.log('Clicked')
+
     let fromCurrency = from.value;
     let toCurrency = to.value;
-    let amt = amount.value;
+    let amt = result.value;
     fetch(`https://api.exchangerate-api.com/v4/latest/${fromCurrency}`)
     .then(response => {
           return response.json();
@@ -264,6 +268,6 @@ convert.addEventListener("click", function() {
        let rate = data.rates[toCurrency];
        let total = rate * amt;
     
-       form1.answer.value = `${amt} ${fromCurrency} = ${total} ${toCurrency}`;
+       form1.currency.value = `${amt} ${fromCurrency} = ${total} ${toCurrency}`;
     });
  });
